@@ -88,7 +88,7 @@ if ($page){
 							$urlshow = urlencode($val['show']);
 							$action = "<a href='index.php?menu=shows_new&title[en]=$urlshow'>Add show</a>";
 						} else {
-							$showid = $e->showid;
+							$showid = $e->show_id;
 							$check = ORM::for_table('episodes')->where('show_id', $showid)->where('season', $val['season'])->where('episode', $val['episode'])->find_one();							
 							if ($check){
 								$action = "Already have (<a href='index.php?menu=episodes&show_id=$showid&season={$val['season']}&episode={$val['episode']}'>Edit</a>)";
